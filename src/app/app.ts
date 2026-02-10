@@ -3,13 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Navbar } from "./_components/navbar/navbar";
 import { BaseUi } from './_components/base-ui/base-ui';
+import { Certificates } from './pages/certificates/certificates';
 import { PrimaryButton } from './_components/primary-button/primary-button';
 import { SecondaryButton } from './_components/secondary-button/secondary-button';
 import { ItemCertificate } from './_components/item-certificate/item-certificate';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, CommonModule, PrimaryButton, SecondaryButton, ItemCertificate, BaseUi],
+  imports: [RouterOutlet, Navbar, CommonModule, PrimaryButton, SecondaryButton, ItemCertificate, BaseUi, Certificates],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
