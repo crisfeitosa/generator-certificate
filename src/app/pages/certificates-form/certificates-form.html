@@ -9,7 +9,7 @@
     <h2 class="card-title">Novo certificado</h2>
     <div class="custom-input-group">
       <label for="name" class="form-label">Nome</label>
-      <input id="name" type="text" class="form-control custom-input" placeholder="Nome do aluno" />
+      <input [(ngModel)]="name" id="name" type="text" class="form-control custom-input" placeholder="Nome do aluno" />
       <div class="error-message d-flex align-items-center">
         <i class="ph ph-warning-circle"></i>
         <p class="m-0">Error message</p>
@@ -18,40 +18,25 @@
     <div class="mb-3 d-flex align-items-end custom-input-group">
       <div class="flex-grow-1 me-2">
         <label for="activity" class="form-label">Atividade</label>
-        <input id="activity" type="text" class="form-control custom-input" placeholder="Atividade exercida" />
+        <input [(ngModel)]="activity" id="activity" type="text" class="form-control custom-input"
+          placeholder="Atividade exercida" />
       </div>
       <app-secondary-button></app-secondary-button>
     </div>
     <div class="atividade-group">
       <label for="activities" class="form-label">Lista de atividades</label>
       <div class="item-list w-100">
+        @for (activity of activities; track $index) {
         <div class="item">
-          <span class="item-text">Configuração com Angular CLI</span>
+          <span class="item-text">{{ activity }}</span>
           <div class="remove-btn">
             <i class="ph-bold ph-x"></i>
           </div>
         </div>
+        @if ($index +1 != activities.length) {
         <hr />
-        <div class="item">
-          <span class="item-text">Configuração com Angular CLI</span>
-          <div class="remove-btn">
-            <i class="ph-bold ph-x"></i>
-          </div>
-        </div>
-        <hr />
-        <div class="item">
-          <span class="item-text">Configuração com Angular CLI</span>
-          <div class="remove-btn">
-            <i class="ph-bold ph-x"></i>
-          </div>
-        </div>
-        <hr />
-        <div class="item">
-          <span class="item-text">Configuração com Angular CLI</span>
-          <div class="remove-btn">
-            <i class="ph-bold ph-x"></i>
-          </div>
-        </div>
+        }
+        }
       </div>
     </div>
     <app-primary-button></app-primary-button>
