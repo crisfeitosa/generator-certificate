@@ -1,59 +1,108 @@
-# GeneratorCertificate
+# 📜 Gerador de Certificados
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+Aplicação desenvolvida durante a **Trilha Angular da Rocketseat** para gerenciar e gerar certificados de atividades.
 
-## Development server
+## 🚀 Sobre o Projeto
 
-To start a local development server, run:
+O Gerador de Certificados é uma aplicação web que permite:
 
-```bash
-ng serve
+- ✅ Criar certificados com nome e lista de atividades
+- 📋 Visualizar todos os certificados criados
+- 🎨 Interface moderna e responsiva
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Angular 21.1.0** - Framework principal
+- **TypeScript** - Linguagem de programação
+- **CSS3** - Estilização
+- **UUID** - Geração de IDs únicos
+- **Vitest** - Testes unitários
+
+## 📁 Estrutura do Projeto
+
+```
+src/app/
+├── _components/          # Componentes reutilizáveis
+│   ├── base-ui/
+│   ├── item-certificate/
+│   ├── navbar/
+│   ├── primary-button/
+│   └── secondary-button/
+├── _services/            # Serviços da aplicação
+│   └── certificate.service.ts
+├── interfaces/           # Interfaces TypeScript
+│   └── certificate.ts
+└── pages/               # Páginas da aplicação
+    ├── certificate/     # Visualização individual
+    ├── certificates/    # Lista de certificados
+    └── certificates-form/ # Formulário de criação
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🎯 Funcionalidades
 
-## Code scaffolding
+### Criar Certificado
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Preencha o nome do certificado
+- Adicione múltiplas atividades
+- Defina a data de emissão
+- Salve e visualize o certificado gerado
 
-```bash
-ng generate component component-name
-```
+### Listar Certificados
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Visualize todos os certificados criados
+- Acesse detalhes de cada certificado
+- Interface intuitiva com componentes customizados
 
-```bash
-ng generate --help
-```
+## 💻 Como Executar
 
-## Building
+### Pré-requisitos
 
-To build the project run:
+- Node.js (versão 18 ou superior)
+- npm 10.8.2 ou superior
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Instalação
 
 ```bash
-ng test
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm start
 ```
 
-## Running end-to-end tests
+Acesse `http://localhost:4200/` no seu navegador.
 
-For end-to-end (e2e) testing, run:
+## 🔧 Scripts Disponíveis
 
 ```bash
-ng e2e
+npm start        # Inicia o servidor de desenvolvimento
+npm run build    # Cria build de produção
+npm test         # Executa testes unitários
+npm run watch    # Build em modo watch
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📦 Build para Produção
 
-## Additional Resources
+```bash
+npm run build
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Os arquivos otimizados serão gerados no diretório `dist/`.
+
+## 🧪 Testes
+
+```bash
+npm test
+```
+
+Executa os testes unitários usando Vitest.
+
+## 📚 Recursos Adicionais
+
+- [Documentação Angular](https://angular.dev)
+- [Angular CLI](https://angular.dev/tools/cli)
+- [Rocketseat](https://www.rocketseat.com.br)
+
+---
+
+Desenvolvido durante a Trilha Angular da Rocketseat 🚀
